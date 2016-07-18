@@ -15,7 +15,7 @@ class JobsController < ApplicationController
         @job = Job.new(job_params)
         if @job.save
             flash[:success] = "Job created!"
-            redirect_to jobs_path
+            redirect_to root_path
         else
             render 'new'
         end
@@ -29,7 +29,7 @@ class JobsController < ApplicationController
         @job = Job.find(params[:id])
         if @product.update(job_params)
             flash[:success] = "Job updated!"
-            redirect_to jobs_path
+            redirect_to root_path
         else
             render 'edit'
         end
@@ -38,7 +38,7 @@ class JobsController < ApplicationController
     def destroy
         @job = Job.find(params[:id])
         @job.destroy
-        redirect_to jobs_path
+        redirect_to root_path
     end
     
     private
