@@ -29,7 +29,7 @@ class JobsController < ApplicationController
         @job = Job.find(params[:id])
         if @product.update(job_params)
             flash[:success] = "Job updated!"
-            redirect_to new_job_path
+            redirect_to jobs_path
         else
             render 'edit'
         end
