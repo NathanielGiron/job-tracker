@@ -5,8 +5,8 @@ class CreateJobs < ActiveRecord::Migration
       t.string :job_title
       t.string :job_number
       t.string :job_link
-      t.date :date_applied
-      t.date :interview_date
+      t.string :date_applied
+      t.string :interview_date
       t.string :contact_person
       t.string :contact_email
     end
