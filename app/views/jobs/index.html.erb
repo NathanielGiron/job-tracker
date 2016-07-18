@@ -1,4 +1,4 @@
-<a class="btn-floating btn-large waves-effect waves-light red horizontal right"><i class="material-icons">add</i></a>
+<a class="btn-floating btn-large waves-effect waves-light red horizontal right" href="/jobs/new"><i class="material-icons">add</i></a>
 <table class="striped highlight">
   <thead>
     <tr>
@@ -9,7 +9,7 @@
         <th>Interview Date</th>
         <th>Contact Person</th>
         <th>Contact Email</th>
-        <th>Action</th>
+        <th><center>Action</center></th>
     </tr>
   </thead>
 
@@ -23,12 +23,12 @@
       <td><%= job.interview_date %></td>
       <td><%= job.contact_person %></td>
       <td><%= job.contact_email %></td>
-      <td>
-        <%= link_to 'Show', job_path(job) %>
+      <td><center>
         <%= link_to 'Edit', edit_job_path(job) %>
-        <%= link_to 'Destroy', job_path(job),
+        <%= link_to 'Delete', job_path(job),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+        </center>
       </td>
     </tr>
   <% end %>

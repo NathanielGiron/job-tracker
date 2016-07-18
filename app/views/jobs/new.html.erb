@@ -1,19 +1,5 @@
-<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">view_list</i></a>
+<a class="btn-floating btn-large waves-effect waves-light red" href="/"><i class="material-icons">view_list</i></a>
 <h5 align="center"><i class="small material-icons">note_add</i> New Job Listing</h5>
-
-<% if @job.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@job.errors.count, "error") %> prohibited
-        this job from being saved:
-      </h2>
-      <ul>
-        <% @job.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-<% end %>
 
 <div class="row">
     <%= form_for(@job, :html => {class: "col s12"}) do |f| %>
