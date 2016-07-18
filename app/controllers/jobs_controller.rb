@@ -27,7 +27,7 @@ class JobsController < ApplicationController
     
     def update
         @job = Job.find(params[:id])
-        if @product.update(job_params)
+        if @job.update(job_params)
             flash[:success] = "Job updated!"
             redirect_to root_path
         else
