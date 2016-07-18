@@ -1,0 +1,36 @@
+<a class="btn-floating btn-large waves-effect waves-light red horizontal right"><i class="material-icons">add</i></a>
+<table class="striped highlight">
+  <thead>
+    <tr>
+        <th>Job #</th>
+        <th>Company Name</th>
+        <th>Job title</th>
+        <th>Date Applied</th>
+        <th>Interview Date</th>
+        <th>Contact Person</th>
+        <th>Contact Email</th>
+        <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.job_number %></td>
+      <td><%= job.company_name %></td>
+      <td><%= job.job_title %></td>
+      <td><%= job.date_applied %></td>
+      <td><%= job.interview_date %></td>
+      <td><%= job.contact_person %></td>
+      <td><%= job.contact_email %></td>
+      <td>
+        <%= link_to 'Show', job_path(job) %>
+        <%= link_to 'Edit', edit_job_path(job) %>
+        <%= link_to 'Destroy', job_path(job),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
