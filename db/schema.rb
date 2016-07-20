@@ -14,14 +14,16 @@
 ActiveRecord::Schema.define(version: 20160704070016) do
 
   create_table "jobs", force: :cascade do |t|
-    t.string "company_name"
-    t.string "job_title"
-    t.string "job_number"
-    t.string "job_link"
-    t.string "date_applied"
-    t.string "interview_date"
-    t.string "contact_person"
-    t.string "contact_email"
+    t.string   "company_name"
+    t.string   "job_title"
+    t.string   "job_number"
+    t.string   "job_link"
+    t.string   "date_applied"
+    t.string   "interview_date"
+    t.string   "contact_person"
+    t.string   "contact_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

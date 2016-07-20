@@ -9,6 +9,8 @@ class CreateJobs < ActiveRecord::Migration
       t.string :interview_date
       t.string :contact_person
       t.string :contact_email
+      
+      t.timestamps
     end
   end
 end

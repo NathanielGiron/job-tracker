@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
     def index
-        @jobs = Job.all
+        @jobs = Job.order(created_at: :desc)
     end
     
     def show
